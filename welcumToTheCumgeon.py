@@ -2,13 +2,10 @@ import time
 import random
 from random import randint
 import json
-with open('mapPrototype.json') as f:
-    map_json = json.loads(f.read())
+from enemies import CumGoblin, CumOrc, CumOgre
 
-class roomPR():
-    def __init__(self):
-        self.PRvariable = 'cum'
-
+# with open('floor1.json') as f:
+#     map_json = json.loads(f.read())
 
 def help():
 
@@ -21,27 +18,10 @@ class Player:
         self.defense = 2
         self.havehpot = True
 
-class CumGoblin:
-    def __init__(self):
-        self.health = 10
-        self.damage = 5
-        self.name = 'Cum Goblin'
-
-class CumOrc:
-    def __init__(self):
-        self.health = 20
-        self.damage = 10
-        self.name = 'Cum Orc'
-
-class CumOgre:
-    def __init__(self):
-        self.health = 50
-        self.damage = 20
-        self.name - 'THE MIGHTY CUM OGRE'
-
 player = Player()
 cumGoblin = CumGoblin()
 cumOrc = CumOrc()
+cumOgre = CumOgre()
 
 command = 'null'
 
@@ -106,6 +86,8 @@ def cumbat(cumGoblin):
 print('welcum to the cumgeon, would you you like to enter? (y/n)')
 command = input()
 
+cumbat(cumGoblin)
+
 if command == 'y' or 'Yes' or 'yes' or 'Y':
     print('you made a mistake')
     time.sleep(2)
@@ -136,11 +118,11 @@ if command == 'y' or 'Yes' or 'yes' or 'Y':
             print('enter a command')
             command = input()
 
-            if command == 'map':
+            
                 
 
         else:
-            print('no')
+            print('yes')
 
 
 elif command == 'n' or 'No' or 'no' or 'N':
